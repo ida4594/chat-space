@@ -7,6 +7,7 @@
 |name|string|null: false|
 ### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :groups, througt: :groups_users
 
 ## messagesテーブル
@@ -23,11 +24,10 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :users, througt: :groups_users
 
 ## groups_usersテーブル

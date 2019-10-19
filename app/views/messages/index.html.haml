@@ -1,0 +1,62 @@
+.wrapper
+
+  = render 'shared/side_bar'
+
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member:
+          %li.member
+            メンバー１
+          %li.member
+            メンバー２
+          %li.member
+            メンバー３
+      .right-header
+        .right-header__button
+          Edit 
+
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー1
+          .upper-message__date
+            2019/10/01
+        .lower-message
+          .lower-message__content
+            こんにちは！
+
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー2
+          .upper-message__date
+            2019/10/02
+        .lower-message
+          .lower-message__content
+            今日は魚を食べました。
+
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー3
+          .upper-message__date
+            2019/10/03
+        .lower-message
+          .lower-message__content
+            雑炊大好き！     
+
+    .form
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'send'}
+          
+          

@@ -56,7 +56,6 @@ $(function() {
       data: {id: last_message_id}
     })
     .done(function (messages) {
-      console.log("kkk");
       var insertHTML = '';
       messages.forEach(function (message) {
         insertHTML = buildHTML(message);
@@ -69,5 +68,5 @@ $(function() {
     });
   };
 };
-　setInterval(reloadMessages, 7000);
+ setInterval(reloadMessages, 7000);
 });
